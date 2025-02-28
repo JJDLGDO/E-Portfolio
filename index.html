@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            overflow-y: auto;
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #34495e;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .sidebar a:hover {
+            background: #1abc9c;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+            width: 100%;
+        }
+        section {
+            margin-bottom: 40px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 5px;
+        }
+        
+        /* Responsive Design for Mobile Devices */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                text-align: center;
+            }
+            .sidebar a {
+                display: inline-block;
+                margin: 5px;
+            }
+            .content {
+                margin-left: 0;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="imgs/id.jpg" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%; display: block; margin: 0 auto 15px;">
+        <h2>Jan Jacob Delgado</h2>
+        <p><strong>Computer Engineer</strong></p>
+        <a href="#profile">Profile</a>
+        <a href="#personal-details">Personal Details</a>
+        <a href="#contact">Contact</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+    </div>
+    <div class="content">
+        <section id="profile">
+            <h2>Profile</h2>
+            <p>I am a highly motivated Computer Engineering student with a passion for embedded systems and IoT development. I have experience in hardware design, programming, and technical assistance. Always eager to learn and innovate in the tech industry.</p>
+        </section>
+        <section id="personal-details">
+            <h2>Personal Details</h2>
+            <p><strong>Full Name:</strong> Jane Jacob S. Delgado</p>
+            <p><strong>Age:</strong>24</p>
+            <p><strong>Date of Birth:</strong> September 8, 2001</p>
+            <p><strong>Nationality:</strong> Filipino</p>
+            <p><strong>Sex:</strong>Male</p>
+            <p><strong>Religion:</strong>Roman Catholic</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>📞 +63-998-308-8167</p>
+            <p>✉️ jjdelgado0908@gmail.com</p>
+            <p>📍 Suarez st. Brgy 4, San Miguel, Iloilo</p>
+            <p>🔗 fb.com/JJDLGDO</p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <p>Western Institute of Technology (2020 - 2025)</p>
+            <p>Bachelor of Science in Computer Engineering</p>
+            <p>Leonora S. Salapantan National Highschool (2019 - 2020)</p>
+            <p>Science, Technology, and Mathematics</p>
+            <p>Central Philippine University (2017 - 2018)</p>
+            <p>San Miguel Central ELementary School (2012-2013)</p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <h3>Technical skills</h3>
+            <p>- Programming</p>
+            <p>- Software and Hardware maintenance</p>
+            <p>- networking and security</p>
+            <p>- Power electronics basics</p>
+            <h3>Soft skills</h3>
+            <p>- 🗣 Communication & Teamwork</p>
+            <p>- ⏳ Time & Project Management</p>
+        </section>
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <p><strong>OJT Intern</strong> - Municiplaity of San Miguel (2024)</p>
+            <ul>
+                <li>Administrative and Office Task</li>
+                <li>Visual Basic Design and Database Management</li>
+                <li>PC Software and Hardware maintenance</li>
+                <li>Network and Printer Set-up and troubleshoot</li>
+            </ul>
+            <p>Esp-32 Seminar(2025)</p>
+            <p>CodeIgniter Seminar(2025)</p>
+        </section>
+        <section id="projects">
+            <h2>Achievements & Projects</h2>
+            <p><strong>Research Project:</strong> Development of Mosquito Trapping device using Sugar-Fermented yeast as an attractant</p>
+            <p><strong>Network Academics:</strong> Getting Started with Cisco Packet Tracer</p>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('.sidebar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
